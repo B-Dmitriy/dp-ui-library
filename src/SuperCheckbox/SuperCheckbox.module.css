@@ -1,0 +1,51 @@
+.superCheckbox__wrapper {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.superCheckbox__wrapper:hover .superCheckbox__span {
+    color: #84DCC6;
+}
+
+.superCheckbox__input {
+    appearance: none;
+    position: relative;
+    padding-left: 22px;
+}
+
+.superCheckbox__input_not_select:before {
+    content: '';
+    top: calc(50% - 8px);
+    left: calc(50% - 8px);
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.superCheckbox__input_select:before {
+    content: '\2713';
+    font-weight: 900;
+    color: #222222;
+    top: calc(50% - 8px);
+    left: calc(50% - 8px);
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.superCheckbox__span {
+    color: white;
+    cursor: pointer;
+    line-height: 16px;
+}
