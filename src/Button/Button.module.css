@@ -19,7 +19,7 @@
     transition: .3s;
 }
 
-.btn:hover {
+.btn.default:hover {
     background: #259cd3;
     box-shadow: 0 15px 20px rgb(10, 136, 196, .4);
     color: white;
