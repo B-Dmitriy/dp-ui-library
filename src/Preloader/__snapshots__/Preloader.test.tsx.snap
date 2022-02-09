@@ -1,23 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button test\`s button snapshot 1`] = `
+exports[`Preloader test\`s preloader snapshot 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <button
-        class="btn default medium"
+      <div
+        class="preloader__wrapper"
       >
-        title
-      </button>
+        <img
+          alt="loader"
+          class="preloader__img"
+          src="load.gif"
+        />
+      </div>
     </div>
   </body>,
   "container": <div>
-    <button
-      class="btn default medium"
+    <div
+      class="preloader__wrapper"
     >
-      title
-    </button>
+      <img
+        alt="loader"
+        class="preloader__img"
+        src="load.gif"
+      />
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

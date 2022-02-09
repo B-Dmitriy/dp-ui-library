@@ -2,7 +2,7 @@ import React, {ChangeEvent} from 'react';
 import s from './Checkbox.module.css';
 
 interface IProps extends React.HTMLProps<HTMLInputElement> {
-    valueCheckbox?: boolean
+    checked: boolean
     onChangeChecked?: (value: boolean) => void
     spanClassName?: string
 }
@@ -10,13 +10,11 @@ interface IProps extends React.HTMLProps<HTMLInputElement> {
 export const Checkbox: React.FC<IProps> = props => {
 
     const {
-        valueCheckbox,
+        checked,
         onChange,
         onChangeChecked,
-        className,
         spanClassName,
         label,
-        checked,
         ...restProps
     } = props;
 
@@ -25,21 +23,23 @@ export const Checkbox: React.FC<IProps> = props => {
         onChangeChecked && onChangeChecked(e.currentTarget.checked);
     };
 
+    const isSelectClass = checked ? s.checkbox__input_select : s.checkbox__input_not_select;
+
     return (
         <div className={s.checkbox}>
             <label className={s.checkbox__wrapper}>
-                <input type={'checkbox'}
-                       onChange={onChangeHandler}
-                       checked={valueCheckbox || checked}
-                       className={`
-                           ${className ? className : ''} 
-                           ${s.checkbox__input} 
-                           ${checked
-                           ? s.checkbox__input_select
-                           : s.checkbox__input_not_select}
-                           `}
-                       {...restProps}/>
-                <span className={`${s.checkbox__span} ${spanClassName}`}>{label}</span>
+                <input
+                    type={'checkbox'}
+                    checked={checked}
+                    onChange={onChangeHandler}
+                    className={`${s.checkbox__input} ${isSelectClass}`}
+                    {...restProps}
+                />
+                <span
+                    className={`${s.checkbox__span} ${spanClassName}`}
+                >
+                    {label}
+                </span>
             </label>
         </div>
     );

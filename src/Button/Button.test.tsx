@@ -7,6 +7,8 @@ describe('Button test`s', () => {
         render(<Button title='test'/>);
 
         expect(screen.getByText('test')).toBeInTheDocument();
+        expect(screen.getByText('test')).toHaveClass('default');
+        expect(screen.getByText('test')).toHaveClass('medium');
     });
 
     it('should be render with type primary', () => {
@@ -25,6 +27,24 @@ describe('Button test`s', () => {
         />);
 
         expect(screen.getByText('test')).toHaveClass('secondary');
+    });
+
+    it('should be render with sizebtn small', () => {
+        render(<Button
+            title='test'
+            sizebtn='small'
+        />);
+
+        expect(screen.getByText('test')).toHaveClass('small');
+    });
+
+    it('should be render with sizebtn large', () => {
+        render(<Button
+            title='test'
+            sizebtn='large'
+        />);
+
+        expect(screen.getByText('test')).toHaveClass('large');
     });
 
     it('button snapshot', () => {

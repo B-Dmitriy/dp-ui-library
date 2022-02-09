@@ -10,10 +10,6 @@
     cursor: pointer;
 }
 
-.checkbox__wrapper:hover .checkbox__span {
-    color: #d2d2d2;
-}
-
 .checkbox__input {
     appearance: none;
     position: relative;
@@ -35,7 +31,7 @@
 .checkbox__input_select:before {
     content: '\2713';
     font-weight: 900;
-    color: #222222;
+    color: white;
     top: calc(50% - 8px);
     left: calc(50% - 8px);
     position: absolute;
@@ -44,12 +40,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color: #259cd3;
     border-radius: 5px;
 }
 
 .checkbox__span {
     color: white;
     cursor: pointer;
-    line-height: 16px;
+    line-height: 1em;
 }

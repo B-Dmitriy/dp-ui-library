@@ -1,23 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button test\`s button snapshot 1`] = `
+exports[`Button test\`s checkbox snapshot 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <button
-        class="btn default medium"
+      <div
+        class="checkbox"
       >
-        title
-      </button>
+        <label
+          class="checkbox__wrapper"
+        >
+          <input
+            checked=""
+            class="checkbox__input checkbox__input_select"
+            type="checkbox"
+          />
+          <span
+            class="checkbox__span undefined"
+          />
+        </label>
+      </div>
     </div>
   </body>,
   "container": <div>
-    <button
-      class="btn default medium"
+    <div
+      class="checkbox"
     >
-      title
-    </button>
+      <label
+        class="checkbox__wrapper"
+      >
+        <input
+          checked=""
+          class="checkbox__input checkbox__input_select"
+          type="checkbox"
+        />
+        <span
+          class="checkbox__span undefined"
+        />
+      </label>
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

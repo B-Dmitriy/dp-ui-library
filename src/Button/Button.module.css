@@ -19,6 +19,27 @@
     transition: .3s;
 }
 
+.btn.small {
+    width: 80px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 10px;
+}
+
+.btn.medium {
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 11px;
+}
+
+.btn.large {
+    width: 140px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 12px;
+}
+
 .btn.default:hover {
     background: #259cd3;
     box-shadow: 0 15px 20px rgb(10, 136, 196, .4);
