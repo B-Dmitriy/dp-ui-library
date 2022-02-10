@@ -14,7 +14,7 @@ export const Input: React.FC<IProps> = props => {
 
     const {
         placeholder, // I extract what could not be passed to input
-        type = 'text',
+        type = 'text', // default type === text
         value,
         label,
         error,
@@ -39,6 +39,8 @@ export const Input: React.FC<IProps> = props => {
     const errorLabelStyle = `${error ? s.input__label_error : ''}`;
     const errorAreaStyle = `${error ? s.input__area_error : ''}`;
 
+    if(type === 'submit') return <input type='submit' value={value} {...restProps}/>;
+
     return (
         <div className={s.input}>
             <input
@@ -52,15 +54,12 @@ export const Input: React.FC<IProps> = props => {
                 {...restProps}
             />
             <label
+                htmlFor='input'
+                data-testid='label'
                 className={`${s.input__label} ${valueStyle} ${errorLabelStyle}`}
             >
-                {label}
+                {error || label}
             </label>
-            <div
-                className={s.input__error}
-            >
-                {error}
-            </div>
         </div>
     );
 };

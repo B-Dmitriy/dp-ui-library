@@ -1,9 +1,12 @@
-.select__wrapper {
+.select {
     display: inline-block;
 }
 
-.select {
+.select__element {
     outline: none;
     padding: 5px;
     border-radius: 3px;
+    cursor: pointer;
 }
+
+

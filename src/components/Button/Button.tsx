@@ -3,13 +3,14 @@ import s from './Button.module.css';
 
 interface IProps extends React.HTMLProps<HTMLButtonElement> {
     title: string
+    icon?: React.ReactNode | React.ReactChild
     type?: 'primary' | 'secondary'
     sizebtn?: 'small' | 'large'
 }
 
 export const Button: React.FC<IProps> = props => {
 
-    const {title, type, sizebtn, ...restProps} = props;
+    const {title, icon, type, sizebtn, ...restProps} = props;
 
     const colorStyle = s[type || 'default'];
 
@@ -21,6 +22,7 @@ export const Button: React.FC<IProps> = props => {
             {...restProps}
         >
             {title}
+            {icon}
         </button>
-    )
+    );
 };

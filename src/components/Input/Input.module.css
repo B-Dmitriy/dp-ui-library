@@ -30,7 +30,7 @@
 }
 
 .input__area:focus ~ .input__label {
-    font-size: 0.8em;
+    font-size: .8em;
     position: absolute;
     top: 0;
     left: 10px;
@@ -41,7 +41,7 @@
 
 .input__area:focus::placeholder {
     color: transparent;
-    transition: 0.3s;
+    transition: .3s;
 }
 
 .input__area:not(.input__area:focus)::placeholder {
@@ -82,16 +82,28 @@
 
 /* error */
 .input__area:not(.input__area:focus).input__area_error {
-    border-bottom: 2px solid #ef5151;
+    border-bottom: 2px solid #EF5151;
     box-shadow: 0 15px 10px rgb(189, 30, 30, 0.4);
 }
 
-.input__error {
-    padding: 0.2em;
-    font-size: 0.8em;
-    color: white;
+.input__area:not(.input__area:focus) ~ .input__label.input__label_error {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: .8em;
+    z-index: 0;
+    color: #EF5151;
 }
 
 .input__area:not(.input__area:focus) ~ .input__label.input__toHaveValue.input__label_error {
     color: #EF5151;
+}
+
+/* autofill styles*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    border-bottom: 2px solid #259cd3;
+    -webkit-text-fill-color: white;
+    transition: background-color 5000s ease-in-out 0s;
 }

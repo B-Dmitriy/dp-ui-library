@@ -1,6 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import {Preloader} from './Preloader';
-import preloader from './../assets/gif/load.gif';
+import preloader from './../../assets/gif/load.gif';
 
 describe('Preloader test`s', () => {
 
