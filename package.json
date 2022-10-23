@@ -2,9 +2,12 @@
   "name": "dp-ui-library",
   "version": "0.0.1",
   "description": "ui components for development platform",
-  "main": "index.js",
+  "main": "./src/index.tsx",
   "scripts": {
-    "start": "node index.js"
+    "eslint": "eslint ./src/*",
+    "eslint:fix": "eslint --fix ./src/*",
+    "build": "webpack --mode=production --config webpack.config.js",
+    "start:dev": "webpack serve --mode=development --config webpack.config.js --open"
   },
   "repository": {
     "type": "git",
@@ -16,12 +19,20 @@
     "url": "https://github.com/B-Dmitriy/dp-ui-library/issues"
   },
   "homepage": "https://github.com/B-Dmitriy/dp-ui-library#readme",
-  "devDependencies": {
-    "webpack": "5.74.0",
-    "webpack-cli": "4.10.0"
-  },
   "dependencies": {
     "react": "18.2.0",
     "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "@typescript-eslint/parser": "^5.40.1",
+    "eslint": "8.26.0",
+    "eslint-plugin-react": "7.31.10",
+    "html-webpack-plugin": "5.5.0",
+    "ts-loader": "9.4.1",
+    "typescript": "4.8.4",
+    "webpack": "5.74.0",
+    "webpack-cli": "4.10.0",
+    "webpack-dev-server": "4.11.1"
   }
 }

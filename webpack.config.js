@@ -6,13 +6,13 @@ module.exports = {
 		path: './src/index.tsx',
 	},
 	output: {
-		path: path.join(__dirname, '..', '/dist'),
+		path: path.join(__dirname, '/dist'),
 		filename: "[name].[contenthash].js",
 		clean: true,
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: path.join(__dirname, '..', 'public', 'index.html'),
+			template: path.join(__dirname, 'public', 'index.html'),
 		}),
 	],
 	module: {
