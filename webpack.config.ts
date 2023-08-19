@@ -3,9 +3,10 @@ import webpack from "webpack";
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import type { Configuration as DevServerConfiguration } from "webpack-dev-server";
 
-// import type { Configuration } from "webpack";
-//
-// const devServer: DevServerConfiguration = {};
+const devServer: DevServerConfiguration = {
+    port: 9000,
+    open: true
+}
 
 const config: webpack.Configuration = {
     mode: 'development',
@@ -33,10 +34,7 @@ const config: webpack.Configuration = {
             template: path.resolve(__dirname, 'public', 'index.html'),
         })
     ],
-    devServer: {
-        port: 9000,
-        open: true
-    },
+    devServer,
 }
 
 export default config;
