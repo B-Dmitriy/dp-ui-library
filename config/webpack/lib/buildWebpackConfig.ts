@@ -3,10 +3,10 @@ import { buildRules } from "./buildRules";
 import { buildResolve } from "./buildResolve";
 import { buildPlugins } from "./buildPlugins";
 import { buildDevServer } from "./buildDevServer";
-import { IWebpackOptions } from "./types/webpack.types";
+import { IWebpackOptions } from "../types/webpack.types";
 
 export function buildWebpackConfig(options: IWebpackOptions): webpack.Configuration {
-    const {mode, paths } = options;
+    const {mode, port, paths, isDev } = options;
     return {
         mode,
         entry: paths.entry,
@@ -16,10 +16,11 @@ export function buildWebpackConfig(options: IWebpackOptions): webpack.Configurat
             clean: true
         },
         module: {
-            rules: buildRules(),
+            rules: buildRules(isDev),
         },
         resolve: buildResolve(),
         plugins: buildPlugins(paths.html),
-        devServer: buildDevServer(),
+        devServer: buildDevServer(port),
+        devtool: isDev ? 'inline-source-map' : undefined
     }
 }

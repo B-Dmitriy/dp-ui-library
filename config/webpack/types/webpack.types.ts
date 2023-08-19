@@ -8,5 +8,12 @@ export interface IBuildPaths {
 
 export interface IWebpackOptions {
     mode: TMode;
+    port: number;
     paths: IBuildPaths;
+    isDev: boolean;
+}
+
+export interface IWebpackEnv {
+    mode: TMode,
+    port: number;
 }
