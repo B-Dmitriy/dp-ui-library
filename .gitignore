@@ -1,2 +1,6 @@
 # development
 /.idea
+
+# build
+/node_modules
+/dist
