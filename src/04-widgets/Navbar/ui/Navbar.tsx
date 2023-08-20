@@ -1,8 +1,8 @@
-import React, {ChangeEvent} from 'react';
+import React, { type ChangeEvent } from 'react';
 import cls from './Navbar.module.scss';
-import {Link} from "react-router-dom";
-import {useTheme} from "../../../07-shared/providers/themeProvider/lib/useTheme";
-import {Theme} from "../../../07-shared/providers/themeProvider/lib/themeContext";
+import { Link } from 'react-router-dom';
+import { useTheme } from '../../../07-shared/providers/themeProvider/lib/useTheme';
+import { type Theme } from '../../../07-shared/providers/themeProvider/lib/themeContext';
 export const Navbar = () => {
     const { theme, setTheme, themeList } = useTheme();
 
@@ -12,8 +12,8 @@ export const Navbar = () => {
 
     return (
         <div className={cls.Navbar}>
-            <Link to={"/todos"}>Todos</Link>
-            <Link to={"/auth"}>Auth</Link>
+            <Link to={'/todos'}>Todos</Link>
+            <Link to={'/auth'}>Auth</Link>
             <select defaultValue={theme} onChange={onChange}>
                 {themeList.map((item) => <option key={item}>{item}</option>)}
             </select>

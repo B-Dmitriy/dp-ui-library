@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --config ./config/webpack/webpack.config.ts --env mode=production",
-    "start": "webpack serve --config ./config/webpack/webpack.config.ts --env port=9000"
+    "start": "webpack serve --config ./config/webpack/webpack.config.ts --env port=9000",
+    "eslint": "eslint --ext .ts,.tsx ./src",
+    "eslint:fix": "eslint --fix --ext .ts,.tsx ./src"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +17,11 @@
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
     "@types/webpack": "5.28.1",
+    "@typescript-eslint/eslint-plugin": "6.4.0",
+    "@typescript-eslint/parser": "6.4.0",
     "css-loader": "6.8.1",
+    "eslint": "8.47.0",
+    "eslint-plugin-react": "7.33.2",
     "html-webpack-plugin": "5.5.3",
     "mini-css-extract-plugin": "2.7.6",
     "sass": "1.66.1",

@@ -1,5 +1,5 @@
-import { ReactNode, Suspense } from 'react';
+import { type ReactNode, Suspense } from 'react';
 
 export const withSuspense = (
-    children: ReactNode,
+    children: ReactNode
 ) => <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>;
