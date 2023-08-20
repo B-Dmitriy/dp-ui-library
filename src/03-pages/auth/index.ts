@@ -1,1 +1,1 @@
-export { AuthLazy } from './ui/AuthLazy';
+export { AuthLazy } from './ui/Auth.lazy';

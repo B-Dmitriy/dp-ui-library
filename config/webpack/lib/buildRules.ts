@@ -4,11 +4,6 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 export function buildRules(isDev: boolean): RuleSetRule[] {
     return [
         {
-            test: /\.tsx?$/,
-            use: 'ts-loader',
-            exclude: /node_modules/,
-        },
-        {
             test: /\.s[ac]ss$/i,
             use: [
                 isDev ? "style-loader" : MiniCssExtractPlugin.loader,
@@ -23,6 +18,11 @@ export function buildRules(isDev: boolean): RuleSetRule[] {
                 },
                 "sass-loader",
             ],
+        },
+        {
+            test: /\.tsx?$/,
+            use: 'ts-loader',
+            exclude: /node_modules/,
         },
     ]
 }

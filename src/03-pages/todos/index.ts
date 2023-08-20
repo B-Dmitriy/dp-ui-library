@@ -1,1 +1,1 @@
-export { TodosLazy } from './ui/TodosLazy';
+export { TodosLazy } from './ui/Todos.lazy';
