@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 
-export const Auth = () => {
+const Auth = () => {
     const [data, setData] = useState();
 
     useEffect(() => {
@@ -19,3 +19,5 @@ export const Auth = () => {
             </div>
     );
 };
+
+export default Auth;
