@@ -6,16 +6,15 @@
 *,
 *::after,
 *::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: Inter, sans-serif;
-  font-size: var(--font-size-m);
-  line-height: var(--font-line-m);
-
-  transition: background var(--transition-time-main);
-  background-color: var(--bg-color);
+    font-family: Inter, sans-serif;
+    font-size: var(--font-size-m);
+    line-height: var(--font-line-m);
+    transition: background var(--transition-time-main);
+    background-color: var(--bg-color);
 }
