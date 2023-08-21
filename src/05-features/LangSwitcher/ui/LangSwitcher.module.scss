@@ -1,0 +1,20 @@
+.LangSwitcher {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 0 4px;
+
+  svg {
+    * {
+      stroke: var(--text-color);
+    }
+  }
+
+  &:hover {
+    svg {
+      * {
+        stroke: var(--divider-hover);
+      }
+    }
+  }
+}

@@ -24,5 +24,13 @@ export function buildRules(isDev: boolean): RuleSetRule[] {
             use: 'ts-loader',
             exclude: /node_modules/,
         },
-    ]
+        {
+            test: /\.svg$/,
+            use: ['@svgr/webpack'],
+        },
+        {
+            test: /\.(png|jpe?g|gif|woff2|woff)$/,
+            type: 'asset/resource',
+        }
+    ];
 }

@@ -1,4 +1,59 @@
 :root {
-  --bg-color-dark: #212121;
-  --bg-color-light: #fff;
+  // Шрифты
+  --font-size-s: 12px;
+  --font-line-s: 20px;
+  --font-size-m: 14px;
+  --font-line-m: 24px;
+  --font-size-l: 24px;
+  --font-line-l: 32px;
+
+  // Размеры
+  --content-container-width: 1440px;
+  --navbar-height: 50px;
+  --sidebar-width: 300px;
+  --sidebar-width-collapsed: 60px;
+
+  // Цвета
+  --white: #fff;
+  --white-mute: #e1e1e1;
+  --black: #1a1a1a;
+  --black-pure: #000;
+  --black-soft: #242424;
+  --black-mute: #2f2f2f;
+  --gray: #8e8e8e;
+  --gray-light-1: #aeaeae;
+  --gray-light-2: #c7c7c7;
+  --gray-light-3: #d1d1d1;
+  --gray-light-4: #e5e5e5;
+  --gray-light-5: #f2f2f2;
+  --gray-dark-1: #636363;
+  --gray-dark-2: #484848;
+  --gray-dark-3: #3a3a3a;
+  --gray-dark-4: #282828;
+  --gray-dark-5: #202020;
+  --dark-bg: #1a1a1a;
+  --gray-light: #e3e3e3;
+  --divider-light-1: #3c3c3c;
+  --divider-light-2: #646464;
+  --divider-dark-1: #545454;
+  --divider-dark-2: #414141;
+  --text-light-1: #213547;
+  --text-light-2: #3c3c3c;
+  --text-dark-1: #fff;
+  --text-dark-2: #b0b0b0;
+  --green: #42b883;
+  --green-light: #42d392;
+  --green-lighter: #35eb9a;
+  --green-dark: #33a06f;
+  --green-darker: #155f3e;
+  --red-error: #cd2d3f;
+  --horizontal-gradient: linear-gradient(to right, #42b883, #5f8cee);
+  --overlay-color: rgb(0 0 0 / 60%);
+
+  // Анимации
+  --transition-time-main: 0.25s;
+  --transition-time-fast: 0.15s;
+
+  // Постоянные величины
+  --border-radius: 8px;
 }
