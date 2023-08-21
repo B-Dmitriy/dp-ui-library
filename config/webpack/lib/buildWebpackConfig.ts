@@ -12,6 +12,7 @@ export function buildWebpackConfig(options: IWebpackOptions): webpack.Configurat
         entry: paths.entry,
         output: {
             filename: "[name].[contenthash].js",
+            assetModuleFilename: "assets/[hash][ext][query]",
             path: paths.output,
             clean: true
         },
@@ -19,7 +20,7 @@ export function buildWebpackConfig(options: IWebpackOptions): webpack.Configurat
             rules: buildRules(isDev),
         },
         resolve: buildResolve(),
-        plugins: buildPlugins(paths.html),
+        plugins: buildPlugins(paths.html, isDev),
         devServer: buildDevServer(port),
         devtool: isDev ? 'inline-source-map' : undefined
     }
