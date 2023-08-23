@@ -13,6 +13,7 @@ export function buildWebpackConfig(options: IWebpackOptions): webpack.Configurat
         output: {
             filename: '[name].[contenthash].js',
             assetModuleFilename: 'assets/[hash][ext][query]',
+            publicPath: '/',
             path: paths.output,
             clean: true
         },

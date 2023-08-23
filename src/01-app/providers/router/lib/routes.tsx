@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { TodosLazy } from '03-pages/todos';
 import { AuthLazy } from '03-pages/auth';
+import { NotFound } from '03-pages/notFound';
 import { withSuspense } from '07-shared/lib/withSuspense/withSuspense';
 import { Layout } from '../ui/Layout/Layout';
 
@@ -16,6 +17,10 @@ export const router = createBrowserRouter([
             {
                 path: '/auth',
                 element: withSuspense(<AuthLazy />)
+            },
+            {
+                path: '/*',
+                element: withSuspense(<NotFound />)
             }
         ]
     }

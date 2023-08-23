@@ -16,6 +16,7 @@ const Auth = () => {
 
     return (
         <div>
+            Auth:
             {JSON.stringify(data)}
         </div>
     );
