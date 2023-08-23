@@ -4,6 +4,8 @@ export interface IBuildPaths {
     entry: string;
     output: string;
     html: string;
+    src: string;
+    node_modules: string;
 }
 
 export interface IWebpackOptions {

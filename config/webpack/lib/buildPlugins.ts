@@ -1,5 +1,5 @@
-import webpack, { WebpackPluginInstance } from "webpack";
-import HtmlWebpackPlugin from "html-webpack-plugin";
+import webpack, { WebpackPluginInstance } from 'webpack';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 export function buildPlugins(htmlPath: string, isDev: boolean): WebpackPluginInstance[] {

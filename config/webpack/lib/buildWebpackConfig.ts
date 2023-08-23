@@ -1,27 +1,27 @@
-import webpack from "webpack";
-import { buildRules } from "./buildRules";
-import { buildResolve } from "./buildResolve";
-import { buildPlugins } from "./buildPlugins";
-import { buildDevServer } from "./buildDevServer";
-import { IWebpackOptions } from "../types/webpack.types";
+import webpack from 'webpack';
+import { buildRules } from './buildRules';
+import { buildResolve } from './buildResolve';
+import { buildPlugins } from './buildPlugins';
+import { buildDevServer } from './buildDevServer';
+import { IWebpackOptions } from '../types/webpack.types';
 
 export function buildWebpackConfig(options: IWebpackOptions): webpack.Configuration {
-    const {mode, port, paths, isDev } = options;
+    const { mode, port, paths, isDev } = options;
     return {
         mode,
         entry: paths.entry,
         output: {
-            filename: "[name].[contenthash].js",
-            assetModuleFilename: "assets/[hash][ext][query]",
+            filename: '[name].[contenthash].js',
+            assetModuleFilename: 'assets/[hash][ext][query]',
             path: paths.output,
             clean: true
         },
         module: {
             rules: buildRules(isDev),
         },
-        resolve: buildResolve(),
+        resolve: buildResolve(paths.src, paths.node_modules),
         plugins: buildPlugins(paths.html, isDev),
         devServer: buildDevServer(port),
         devtool: isDev ? 'inline-source-map' : undefined
-    }
+    };
 }

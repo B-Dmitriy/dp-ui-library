@@ -2,7 +2,7 @@ import {
     memo, MutableRefObject, PropsWithChildren, useRef, useState,
 } from 'react';
 import classes from './Dropdown.module.scss';
-import {clsx} from "clsx";
+import { clsx } from 'clsx';
 
 type DropdownItem = { label: string; value: string; };
 type DropdownList = DropdownItem[];

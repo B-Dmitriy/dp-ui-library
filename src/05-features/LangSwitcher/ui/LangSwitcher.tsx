@@ -1,8 +1,8 @@
-import { memo, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import LangIcon from '../../../07-shared/assets/icons/language.svg';
-import { Dropdown } from '../../../07-shared/ui/Dropdown/Dropdown';
-import classes from './LangSwitcher.module.scss';
+import { memo, useCallback, useMemo } from 'react';
+import { Dropdown } from '07-shared/ui/Dropdown';
+import LangIcon from '07-shared/assets/icons/language.svg';
+import cls from './LangSwitcher.module.scss';
 
 const LangSwitcher = memo(() => {
     const { i18n } = useTranslation();
@@ -18,7 +18,7 @@ const LangSwitcher = memo(() => {
     );
 
     return (
-        <div className={classes.LangSwitcher}>
+        <div className={cls.LangSwitcher}>
             <Dropdown
                 list={list}
                 onSelect={onSelectChangeLang}

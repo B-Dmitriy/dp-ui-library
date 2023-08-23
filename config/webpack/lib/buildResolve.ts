@@ -1,7 +1,11 @@
-import { ResolveOptions } from "webpack";
+import { ResolveOptions } from 'webpack';
 
-export function buildResolve(): ResolveOptions {
+export function buildResolve(srcPath: string, modulesPath: string): ResolveOptions {
     return {
         extensions: ['.tsx', '.ts', '.js'],
-    }
+        preferAbsolute: true,
+        modules: [srcPath, modulesPath],
+        mainFiles: ['index'],
+        alias: {}
+    };
 }
