@@ -22,7 +22,7 @@ export function buildWebpackConfig(options: IWebpackOptions): webpack.Configurat
         },
         resolve: buildResolve(paths.src, paths.node_modules),
         plugins: buildPlugins(paths.html, isDev),
-        devServer: buildDevServer(port),
+        devServer: isDev ? buildDevServer(port) : undefined,
         devtool: isDev ? 'inline-source-map' : undefined
     };
 }
