@@ -3,6 +3,7 @@
  * https://jestjs.io/docs/configuration
  */
 
+import path from 'path';
 import type { Config } from 'jest';
 
 const config: Config = {
@@ -92,6 +93,7 @@ const config: Config = {
     // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
     moduleNameMapper: {
         '\\.(css|scss)$': 'identity-obj-proxy',
+        '\\.svg$': path.resolve(__dirname, 'lib', 'MockSVG.tsx'),
     },
 
     modulePaths: [
