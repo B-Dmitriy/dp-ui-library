@@ -22,7 +22,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/*',
-                element: withSuspense(<NotFound />)
+                element: <NotFound />
             }
         ]
     }
