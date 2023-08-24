@@ -20,6 +20,7 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "react/display-name": "off",
         "no-undef": "off",
         "object-curly-spacing": ["error", "always"],
         "quotes": ["error", "single"],
