@@ -1,0 +1,54 @@
+@keyframes linear {
+  0% {
+    width: 0;
+
+    left: -10%;
+  }
+
+  25% {
+    width: 25%;
+
+    left: 25%;
+  }
+
+  50% {
+    width: 50%;
+
+    left: 50%;
+  }
+
+  75% {
+    width: 25%;
+
+    left: 75%;
+  }
+
+  100% {
+    width: 0;
+
+    left: 100%;
+  }
+}
+
+.loader {
+  width: 100%;
+  height: 4px;
+
+  position: relative;
+  background-color: transparent;
+
+  .block {
+    height: 100%;
+
+    position: absolute;
+    overflow: hidden;
+    background: var(--color-linear-loader);
+
+    &.loading {
+      animation-name: linear;
+      animation-iteration-count: infinite;
+      animation-duration: 1.2s;
+      animation-timing-function: linear;
+    }
+  }
+}
