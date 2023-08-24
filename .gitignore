@@ -1,6 +1,8 @@
 # development
 /.idea
+/config/jest/coverage
 
 # build
 /node_modules
 /dist
+
