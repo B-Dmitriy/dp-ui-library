@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1692857081712" clover="3.2.0">
-  <project timestamp="1692857081712" name="All files">
+<coverage generated="1692857206732" clover="3.2.0">
+  <project timestamp="1692857206732" name="All files">
     <metrics statements="85" coveredstatements="77" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="0" elements="92" coveredelements="79" complexity="0" loc="85" ncloc="85" packages="1" files="2" classes="2"/>
     <file name="Dropdown.tsx" path="/home/dbalyaev/temp/p1908/src/07-shared/ui/Dropdown/Dropdown.tsx">
       <metrics statements="84" coveredstatements="76" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="0"/>
