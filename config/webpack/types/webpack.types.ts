@@ -13,6 +13,7 @@ export interface IWebpackOptions {
     port: number;
     paths: IBuildPaths;
     isDev: boolean;
+    isAnalyze: boolean;
 }
 
 export interface IWebpackEnv {

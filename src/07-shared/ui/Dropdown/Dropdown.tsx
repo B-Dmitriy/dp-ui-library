@@ -1,8 +1,8 @@
+import { clsx } from 'clsx';
 import {
     memo, MutableRefObject, PropsWithChildren, useRef, useState,
 } from 'react';
-import classes from './Dropdown.module.scss';
-import { clsx } from 'clsx';
+import cls from './Dropdown.module.scss';
 
 type DropdownItem = { label: string; value: string; };
 type DropdownList = DropdownItem[];
@@ -44,29 +44,30 @@ const Dropdown = memo(({
 
     return (
         <div
+            data-testid={'Dropdown-test-id'}
             onMouseOver={showDropdown}
-            className={clsx(classes.Dropdown, {}, [className])}
+            className={clsx(cls.Dropdown, {}, [className])}
         >
             <div
-                className={classes.root}
+                className={cls.root}
                 onMouseLeave={hideDropdown}
             >
-                <span className={clsx(classes.children, {
-                    [classes.open]: isOpen,
+                <span className={clsx(cls.children, {
+                    [cls.open]: isOpen,
                 })}
                 >
                     {children}
                 </span>
                 <ul
-                    className={clsx(classes.list, {
-                        [classes.open]: isOpen,
-                        [classes.mounted]: isClosing,
+                    className={clsx(cls.list, {
+                        [cls.open]: isOpen,
+                        [cls.mounted]: isClosing,
                     })}
                 >
                     {list.map((item) => (
                         <li
                             key={item.value}
-                            className={classes.listItem}
+                            className={cls.listItem}
                             onClick={() => onItemClick(item.value)}
                         >
                             {item.label}

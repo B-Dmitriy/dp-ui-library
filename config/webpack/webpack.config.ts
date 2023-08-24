@@ -6,6 +6,7 @@ export default (env: IWebpackEnv) => {
     const port = env.port || 9000;
     const mode = env.mode || 'development';
     const isDev = mode === 'development';
+    const isAnalyze = false;
 
     return buildWebpackConfig({
         mode,
@@ -17,6 +18,7 @@ export default (env: IWebpackEnv) => {
             src: path.resolve(__dirname, '..', '..', 'src'),
             node_modules: path.resolve(__dirname, '..', '..', 'node_modules'),
         },
-        isDev
+        isDev,
+        isAnalyze
     });
 };
