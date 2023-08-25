@@ -8,16 +8,16 @@ const Todos = () => {
     const [data, setData] = useState([]);
     const { t } = useTranslation();
 
-    const todo = {
-        id: 12312,
-        user_id: 123,
-        title: 'This is todolist',
-        description: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum',
-        is_done: false,
-        deadline: '2023-08-30T12:12:05.655Z',
-        created_at: '2023-08-24T12:12:05.655Z',
-        updated_at: '2023-08-24T12:12:05.655Z',
-    };
+    // const todoo = {
+    //     id: 12312,
+    //     user_id: 123,
+    //     title: 'This is todolist',
+    //     description: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum',
+    //     is_done: false,
+    //     deadline: '2023-08-30T12:12:05.655Z',
+    //     created_at: '2023-08-24T12:12:05.655Z',
+    //     updated_at: '2023-08-24T12:12:05.655Z',
+    // };
 
     useEffect(() => {
         axios
