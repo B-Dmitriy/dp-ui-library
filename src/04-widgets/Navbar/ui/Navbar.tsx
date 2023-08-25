@@ -5,14 +5,14 @@ import cls from './Navbar.module.scss';
 import { LinearLoader } from '07-shared/ui/LinearLoader/LinearLoader';
 export const Navbar = () => {
     return (
-        <div>
-            <div className={cls.Navbar}>
+        <div className={cls.Navbar}>
+            <header className={cls.header}>
                 <Link to={'/todos'}>Todos</Link>
                 <Link to={'/auth'}>Auth</Link>
                 <ThemeSwitcher />
                 <LangSwitcher />
-            </div>
-            <LinearLoader isLoading={true}/>
+            </header>
+            <LinearLoader isLoading={false}/>
         </div>
     );
 };
