@@ -16,7 +16,8 @@ export function buildPlugins(htmlPath: string, isDev: boolean, isAnalyze: boolea
     });
 
     const definePlugin = new webpack.DefinePlugin({
-        __IS_DEV__: isDev
+        __IS_DEV__: isDev,
+        __API__: JSON.stringify('http://localhost:3000'),
     });
 
     const analyze = new BundleAnalyzerPlugin({

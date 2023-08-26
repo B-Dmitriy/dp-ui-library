@@ -1,8 +1,12 @@
 .Navbar {
-    display: flex;
-    align-items: center;
-    height: 50px;
+    height: var(--navbar-height);
     transition: background var(--transition-time-main);
     background-color: var(--bg-color);
     border-bottom: 1px solid var(--divider);
+
+    .header {
+        display: flex;
+        align-items: center;
+        height: calc(var(--navbar-height) - var(--linear-loader-height));
+    }
 }
