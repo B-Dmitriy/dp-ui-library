@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Todo } from '05-features/Todo';
 import { fetchTodos } from '06-entities/todos';
-import { getTodos, getTodosIsLoading } from '06-entities/todos/lib/selectors/todosSelectors';
+import { getTodos, getTodosIsLoading } from '06-entities/todos';
 import { useAppDispatch, useAppSelector } from '07-shared/lib';
 import { PageLoader } from '07-shared/ui/PageLoader/PageLoader';
 import cls from './Todos.module.scss';
