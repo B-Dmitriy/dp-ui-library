@@ -23,5 +23,5 @@
     "./config/jest/setup.jest.ts",
     "./src/**/*.ts",
     "./src/**/*.tsx"
-  ]
+  ],
 }

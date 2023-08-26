@@ -8,3 +8,8 @@ export interface Todo {
     created_at: string
     updated_at: string | null
 }
+
+export interface TodosState {
+    isLoading: boolean
+    todos: Todo[]
+}

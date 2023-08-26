@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Todo } from '06-entities/todos';
 import { StatusChip } from '07-shared/ui/StatusChip';
-import { timeConvertor } from '07-shared/lib/timeConvertor/timeConvertor';
+import { timeConvertor } from '07-shared/lib';
 import cls from './Todolist.module.scss';
 
 const Todolist = () => {

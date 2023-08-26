@@ -1,39 +1,30 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Todo } from '05-features/Todo';
+import { fetchTodos } from '06-entities/todos';
+import { getTodos, getTodosIsLoading } from '06-entities/todos/lib/selectors/todosSelectors';
+import { useAppDispatch, useAppSelector } from '07-shared/lib';
+import { PageLoader } from '07-shared/ui/PageLoader/PageLoader';
 import cls from './Todos.module.scss';
 
 const Todos = () => {
-    const [data, setData] = useState([]);
     const { t } = useTranslation();
+    const dispatch = useAppDispatch();
 
-    // const todoo = {
-    //     id: 12312,
-    //     user_id: 123,
-    //     title: 'This is todolist',
-    //     description: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum',
-    //     is_done: false,
-    //     deadline: '2023-08-30T12:12:05.655Z',
-    //     created_at: '2023-08-24T12:12:05.655Z',
-    //     updated_at: '2023-08-24T12:12:05.655Z',
-    // };
+    const todos = useAppSelector(getTodos);
+    const isLoading = useAppSelector(getTodosIsLoading);
+
 
     useEffect(() => {
-        axios
-            .get('http://localhost:3000/api/v1/todos', {
-                headers: {
-                    Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsInJvbGVzIjpbMl0sImlhdCI6MTY5Mjk0MjQ4OCwiZXhwIjoxNjkyOTQ0Mjg4fQ.1GV4EQZntp_qhmvxwpuNfJv91Z4AS_svJC-oa1vMlIc',
-                }
-            })
-            .then((res) => setData(res.data))
-            .catch((err) => console.log(err));
+        dispatch(fetchTodos());
     }, []);
+
+    if (isLoading) return <PageLoader />;
 
     return (
         <div className={cls.Todos}>
             {t('todos')}
-            { data.map((item) => (
+            { todos.map((item) => (
                 <Todo
                     key={item.id}
                     id={item.id}
