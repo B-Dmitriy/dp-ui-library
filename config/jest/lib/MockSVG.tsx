@@ -1,3 +1,11 @@
 import React from 'react';
 
-export const MockSVG = () => <svg />;
+interface MockSVGProps {
+    onClick?: (arg: any) => void;
+}
+
+const MockSVG = ({
+    onClick
+}: MockSVGProps) => <svg data-testid="test_svg_icon_id" onClick={onClick} />;
+
+export default MockSVG;
