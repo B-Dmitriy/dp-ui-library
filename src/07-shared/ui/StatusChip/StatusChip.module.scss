@@ -1,15 +1,15 @@
 .StatusChip {
-  display: inline-block;
-  border-radius: var(--border-radius);
-  padding: 0 8px;
+    display: inline-block;
+    border-radius: var(--border-radius);
+    padding: 0 8px;
 
-  &.done {
-    color: var(--text-light-1);
-    background-color: var(--green-light);
-  }
+    &.done {
+        color: var(--text-light-1);
+        background-color: var(--green-light);
+    }
 
-  &.in_progress {
-    color: var(--text-dark-1);
-    background-color: var(--blue);
-  }
+    &.in_progress {
+        color: var(--text-dark-1);
+        background-color: var(--blue);
+    }
 }

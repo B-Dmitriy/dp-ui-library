@@ -1,41 +1,41 @@
 .Todo {
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 12px;
-  border-radius: var(--border-radius);
-  border: 1px solid var(--modal-border-color);
-  background-color: var(--bg-color-mute);
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--modal-border-color);
+    background-color: var(--bg-color-mute);
 
-  .info {
-    .header {
-      display: flex;
-      align-items: baseline;
-      margin: 0 0 4px 0;
+    .info {
+        .header {
+            display: flex;
+            align-items: baseline;
+            margin: 0 0 4px;
 
-      .id {
+            .id {
+                font-size: var(--font-size-s);
+                line-height: var(--font-line-s);
+                color: var(--text-secondary);
+            }
+
+            .title {
+                color: var(--text-color);
+                font-size: var(--font-size-m);
+                line-height: var(--font-line-m);
+                font-weight: 600;
+                text-decoration: none;
+                margin-left: 8px;
+
+                &:hover {
+                    color: var(--text-hover);
+                }
+            }
+        }
+    }
+
+    .createAt {
         font-size: var(--font-size-s);
         line-height: var(--font-line-s);
         color: var(--text-secondary);
-      }
-
-      .title {
-        color: var(--text-color);
-        font-size: var(--font-size-m);
-        line-height: var(--font-line-m);
-        font-weight: 600;
-        text-decoration: none;
-        margin-left: 8px;
-
-        &:hover {
-          color: var(--text-hover);
-        }
-      }
     }
-  }
-
-  .createAt {
-    font-size: var(--font-size-s);
-    line-height: var(--font-line-s);
-    color: var(--text-secondary);
-  }
 }
