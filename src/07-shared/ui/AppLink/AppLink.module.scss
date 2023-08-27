@@ -1,0 +1,44 @@
+.AppLink {
+    display: inline-block;
+    text-decoration: underline;
+    transition: color var(--transition-time-main);
+    margin: 0 2px;
+
+    &.withIcon {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .title {
+        margin-right: 4px;
+    }
+
+    &.primary {
+        color: var(--link-color);
+
+        svg {
+            path {
+                stroke: var(--link-color);
+            }
+        }
+
+        &:hover {
+            color: var(--link-color-hover);
+        }
+    }
+
+    &.secondary {
+        color: var(--button-primary-bg);
+
+        svg {
+            path {
+                stroke: var(--button-primary-bg);
+            }
+        }
+
+        &:hover {
+            color: var(--button-primary-hover);
+        }
+    }
+}

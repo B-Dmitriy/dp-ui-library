@@ -1,5 +1,5 @@
-export { todosReducer } from './lib/slice/todos.slice';
-export { fetchTodos } from './lib/services/fetchTodos/fetchTodos';
-export { getTodos, getTodosIsLoading } from './lib/selectors/todosSelectors';
+export { todosReducer } from '06-entities/todos/model/slice/todos.slice';
+export { fetchTodos } from '06-entities/todos/model/services/fetchTodos/fetchTodos';
+export { getTodos, getTodosIsLoading } from '06-entities/todos/model/selectors/todosSelectors';
 
 export type { Todo } from './types/todos.types';

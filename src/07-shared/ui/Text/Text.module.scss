@@ -1,0 +1,29 @@
+.Text {
+    color: var(--text-color);
+    padding: 0;
+    margin: 0;
+
+    &.header {
+        font-size: var(--font-size-l);
+    }
+
+    &.paragraph {
+        font-size: var(--font-size-m);
+    }
+
+    &.error {
+        color: var(--red-error);
+    }
+
+    &.left {
+        text-align: left;
+    }
+
+    &.right {
+        text-align: right;
+    }
+
+    &.center {
+        text-align: center;
+    }
+}

@@ -3,7 +3,7 @@ import { TodosLazy } from '03-pages/todos';
 import { AuthLazy } from '03-pages/auth';
 import { NotFound } from '03-pages/notFound';
 import { TodolistLazy } from '03-pages/todolist';
-import { ErrorBoundary } from '07-shared/ui/ErrorBoundary';
+import { ErrorBoundary } from '05-features/ErrorBoundary';
 import { withSuspense } from '07-shared/lib/withSuspense/withSuspense';
 import { Layout } from '../ui/Layout/Layout';
 

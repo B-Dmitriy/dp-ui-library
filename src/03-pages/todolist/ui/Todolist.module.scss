@@ -1,45 +1,41 @@
 .Todolist {
-  min-height: 100%;
-  max-width: 940px;
-  margin: 0 auto;
+    min-height: 100%;
+    max-width: 940px;
+    margin: 0 auto;
 
-  .header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    border-bottom: 1px solid var(--divider);
-    padding: 8px 0;
+    .header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        border-bottom: 1px solid var(--divider);
+        padding: 8px 0;
 
-    .header_info {
-      & > * {
-        margin-right: 12px;
-      }
+        .header_info {
+            & > * {
+                margin-right: 12px;
+            }
+        }
     }
 
-    .header_controls {
+    .main {
+        padding: 8px 0;
+        border-bottom: 1px solid var(--divider);
 
+        .main_header {
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+
+            .title {
+                font-size: var(--font-size-l);
+                line-height: var(--font-line-l);
+            }
+        }
     }
-  }
 
-  .main {
-    padding: 8px 0;
-    border-bottom: 1px solid var(--divider);
-
-    .main_header {
-      display: flex;
-      align-items: start;
-      justify-content: space-between;
-
-      .title {
-        font-size: var(--font-size-l);
-        line-height: var(--font-line-l);
-      }
+    .date {
+        color: var(--text-secondary);
+        font-size: var(--font-size-s);
+        line-height: var(--font-line-s);
     }
-  }
-
-  .date {
-    color: var(--text-secondary);
-    font-size: var(--font-size-s);
-    line-height: var(--font-line-s);
-  }
 }
