@@ -15,3 +15,8 @@ export interface LoginParams {
     login: string
     password: string
 }
+
+export interface RefreshResponse {
+    user: User
+    accessToken: string
+}

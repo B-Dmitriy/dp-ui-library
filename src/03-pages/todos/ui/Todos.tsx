@@ -14,7 +14,6 @@ const Todos = () => {
     const todos = useAppSelector(getTodos);
     const isLoading = useAppSelector(getTodosIsLoading);
 
-
     useEffect(() => {
         dispatch(fetchTodos());
     }, []);

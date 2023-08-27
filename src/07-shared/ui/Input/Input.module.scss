@@ -38,6 +38,7 @@
                 padding: 4px 44px 4px 8px;
                 transition: border-color var(--transition-time-main);
                 background-color: var(--input-bg);
+                height: 32px;
 
                 &.clear {
                     border: none;
