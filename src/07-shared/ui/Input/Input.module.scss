@@ -21,8 +21,8 @@
             .text {
                 width: auto;
                 align-self: start;
-                font-size: var(--font-size-s);
-                line-height: var(--font-line-s);
+                font-size: var(--font-size-m);
+                line-height: var(--font-line-m);
             }
         }
 
@@ -39,6 +39,7 @@
                 transition: border-color var(--transition-time-main);
                 background-color: var(--input-bg);
                 height: 32px;
+                font-size: var(--font-size-m);
 
                 &.clear {
                     border: none;
